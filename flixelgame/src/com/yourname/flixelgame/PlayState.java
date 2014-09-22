@@ -3,6 +3,7 @@ package com.yourname.flixelgame;
 import org.flixel.FlxG;
 import org.flixel.FlxSprite;
 import org.flixel.FlxState;
+import org.flixel.FlxText;
 import org.flixel.event.IFlxAnim;
 /**
 * A simple demo to show how animation works.
@@ -20,6 +21,8 @@ public final String ImgChest = "examples/animation/pack:chest";
 public final String ImgBat = "examples/animation/pack:bat";
 public final String ImgGreenPotion = "examples/animation/pack:greenpotion";
 private FlxSprite _zombie;
+private FlxText texto;
+
 @Override
 public void create()
 {
@@ -82,6 +85,12 @@ s.play("default");
 //s.scale.x=4;
 // s = new FlxSprite(120, 20, ImgGreenPotion);
 add(s);
+
+
+texto = new FlxText(0, 0, 200, "Hello World!!!!!");
+texto.setColor(255255155);
+add(texto);
+
 }
 IFlxAnim AnimationCallback = new IFlxAnim()
 {
